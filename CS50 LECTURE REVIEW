@@ -1,1 +1,83 @@
+Notes de cours :
+-Passage de Scratch à C : Scratch utilise des blocs visuels.
+-C est un langage textuel avec une syntaxe stricte.
+concepts restent identiques :
+variables
+conditions
+boucles
+fonctions
+Code source et compilation :
+-Le programme est écrit en C dans un fichier .c.
+-Le compilateur transforme le code source en code machine.
+Commandes principales :
+make programme
+./programme
+Structure minimale d’un programme C:
+-#include permet d’importer des bibliothèques.
+-main est le point d’entrée du programme.
+-printf permet l’affichage.
+-#include <stdio.h>
+-int main(void)
+{
+    printf("hello, world\n");
+}
+Bibliothèques :
+stdio.h : entrées/sorties standard.
+cs50.h : fonctions simplifiées pour l’entrée utilisateur :
+get_int
+get_long
+get_string
+Types de variables
+int : entier
+long : entier long
+float : nombre décimal
+char : caractère
+string : chaîne de caractères
+-En C, le type doit toujours être précisé.
+-Affichage avec printf
+-printf nécessite une chaîne de format.
+%i : int
+%li : long
+%s : string
+printf("%i\n", x);
+Conditions :
+if (x > 0)
+{
+    printf("positif\n");
+}
+else
+{
+    printf("negatif\n");
+}
+Boucles :
+//while
+while (i < 3)
+{
+    printf("meow\n");
+    i++;
+}
 
+//do while (exécuté au moins une fois)
+do
+{
+    n = get_int("Number: ");
+}
+while (n < 1);
+
+
+//for
+for (int i = 0; i < 3; i++)
+{
+    printf("meow\n");
+}
+
+Fonctions :
+Les fonctions permettent de structurer le programme et d’éviter les répétitions.
+
+void meow(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("meow\n");
+    }
+}
