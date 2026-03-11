@@ -1,1 +1,0 @@
-gcc -Wall -pedantic -ansi exercice1.c -o exercice1
